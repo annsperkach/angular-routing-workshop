@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  template: '<h1>About Me</h1>',
 })
-export class AboutMeComponent {
-
-}
+export class AboutMeComponent {}

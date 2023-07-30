@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-watch',
-  templateUrl: './watch.component.html',
-  styleUrls: ['./watch.component.css']
+  template: '<h1>Watch, {{ id }}</h1>',
 })
-export class WatchComponent {
+export class WatchComponent implements OnInit {
+  id: string | undefined;
 
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id')!;
+  }
 }
